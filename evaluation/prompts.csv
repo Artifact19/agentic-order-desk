@@ -1,0 +1,61 @@
+message,dish,is_veg,max_price,max_eta_minutes
+veg pizza under 300 within 40 minutes,pizza,true,300,40
+I'm craving paneer tikka budget 350,paneer tikka,,350,
+get me a cold coffee in 20 mins,cold coffee,,,20
+something spicy like chicken biryani under 400,chicken biryani,false,400,
+hungry want waffles under 250,waffles,,250,
+order 2 masala dosa within 30 minutes,masala dosa,,,30
+can you find veg momos below 200,momos,true,200,
+i want falooda,falooda,,,
+bhai hakka noodles mangwa do 200 tak,hakka noodles,,200,
+misal pav please fast,misal pav,,,
+chole bhature under 250 delivered in 35 min,chole bhature,,250,35
+a shawarma roll non veg max 220,shawarma roll,false,220,
+hot chocolate under ₹150 in half an hour,hot chocolate,,150,30
+order a veg burger under 150,burger,true,150,
+need a margherita pizza in 25 minutes,margherita pizza,,,25
+pav bhaji for dinner under 200,pav bhaji,,200,
+looking for butter chicken under 450 within 45 minutes,butter chicken,false,450,45
+get me some french fries,french fries,,,
+i'd like a paneer butter masala under 300,paneer butter masala,,300,
+veg thali under 250 within 40 mins,thali,true,250,40
+send me a chocolate shake,chocolate shake,,,
+can I get vada pav in 15 minutes,vada pav,,,15
+order chicken momos under ₹180,chicken momos,false,180,
+dal khichdi under 200 please,dal khichdi,,200,
+idli sambar within 30 minutes,idli sambar,,,30
+grilled sandwich below 150,grilled sandwich,,150,
+egg fried rice under 220,egg fried rice,false,220,
+mango lassi in 20 mins,mango lassi,,,20
+veg hakka noodles and nothing else under 180,hakka noodles,true,180,
+craving a brownie with ice cream,brownie,,,
+find me a cheese burst pizza under 400 in 40 minutes,cheese burst pizza,,400,40
+I want gulab jamun,gulab jamun,,,
+fish thali under 350,fish thali,false,350,
+order 1 plate poha within 20 minutes,poha,,,20
+veg biryani under 250 delivered within 35 minutes,biryani,true,250,35
+kuch spicy chahiye schezwan noodles 200 tak,schezwan noodles,,200,
+paneer kathi roll under 160,paneer kathi roll,,160,
+please get a cappuccino,cappuccino,,,
+pasta in white sauce under 300,pasta,,300,
+show me red sauce pasta below 280,red sauce pasta,,280,
+chicken shawarma within 30 min,chicken shawarma,false,,30
+can you order a cheesecake for me,cheesecake,,,
+pure veg pizza under 350,pizza,true,350,
+non veg biryani within 45 minutes under 400,biryani,false,400,45
+garlic bread under 120,garlic bread,,120,
+order dabeli quickly,dabeli,,,
+tandoori chicken under 500,tandoori chicken,false,500,
+want veg manchurian under 200 in 30 mins,manchurian,true,200,30
+sabudana khichdi please,sabudana khichdi,,,
+order a masala chai,masala chai,,,
+bring me rasmalai under 150,rasmalai,,150,
+aloo paratha within 25 minutes,aloo paratha,,,25
+get me a club sandwich budget 200,club sandwich,,200,
+spring rolls under 180,spring rolls,,180,
+mutton biryani under 500 in 50 minutes,mutton biryani,false,500,50
+cold coffee with ice cream under 150,cold coffee,,150,
+i feel like having something italian maybe a margherita,margherita,,,
+yaar ek chicken burger mangao 200 ke andar,chicken burger,false,200,
+hungry for pani puri,pani puri,,,
+veg pulao below 220 delivered in 40 minutes,pulao,true,220,40

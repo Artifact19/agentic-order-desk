@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Food Ordering Agent · Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/admin.css">
+</head>
+<body>
+  <div class="app">
+    <aside class="rail glass">
+      <div class="rail-brand"><span class="rail-logo" id="rail-logo"></span><span class="rail-word">Food Agent</span></div>
+      <nav class="rail-nav" role="tablist" aria-label="Admin sections">
+        <button class="tab active" data-tab="session" role="tab">
+          <svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M21.5 20a6.5 6.5 0 0 0-4-6"/></svg>
+          <span>Session</span>
+        </button>
+        <button class="tab" data-tab="run" role="tab">
+          <svg viewBox="0 0 24 24"><path d="M3 12h4l3-8 4 16 3-8h4"/></svg>
+          <span>Checkpoints</span><i class="tab-dot"></i>
+        </button>
+        <button class="tab" data-tab="data" role="tab">
+          <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg>
+          <span>Data layer</span>
+        </button>
+        <button class="tab" data-tab="agents" role="tab">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="7" height="7" rx="2"/><rect x="14" y="4" width="7" height="7" rx="2"/><rect x="8.5" y="14" width="7" height="7" rx="2"/><path d="M6.5 11v1.5a1.5 1.5 0 0 0 1.5 1.5h1M17.5 11v1.5A1.5 1.5 0 0 1 16 14h-1"/></svg>
+          <span>Browser</span>
+        </button>
+        <button class="tab" data-tab="memory" role="tab">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 3v18"/></svg>
+          <span>Memory</span>
+        </button>
+        <button class="tab" data-tab="faults" role="tab">
+          <svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg>
+          <span>Faults</span>
+        </button>
+      </nav>
+      <a class="tab rail-link" href="/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg>
+        <span>Customer view</span>
+      </a>
+    </aside>
+
+    <div class="workspace">
+      <header class="topbar glass">
+        <div class="title">
+          <h1>Admin console</h1>
+          <p>Watch the agent work, step by step</p>
+        </div>
+        <div class="topbar-meta">
+          <div class="status-pill" id="model-status"><span class="dot"></span><span>Connecting…</span></div>
+          <div class="session-chip" id="session-chip">
+            <span class="label">Session</span>
+            <select id="session-picker" class="session-picker" aria-label="Session to inspect"><option value="">—</option></select>
+            <span class="sep"></span><span id="session-turns">0 turns</span>
+          </div>
+          <button class="btn btn-soft-danger" id="clear-session" title="Clear this session's cached context and start a new session">
+            <svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg>
+            <span>Clear cache · New session</span>
+          </button>
+          <button class="icon-btn" id="toggle-inspector" aria-label="Show details panel">
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M14 4v16"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <div class="connection-banner" id="connection-banner" hidden>
+        <span class="spinner"></span>
+        <span>Server unreachable. Waiting for it to come back…</span>
+      </div>
+
+      <main class="layout">
+        <section class="chat glass">
+          <div class="thread" id="thread"></div>
+          <div class="composer">
+            <div class="suggestions" id="suggestions"></div>
+            <form id="composer-form" class="composer-box">
+              <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+              <textarea id="composer-input" rows="1" maxlength="500" placeholder="Ask the agent to order something, or refine the last request…" autocomplete="off"></textarea>
+              <button class="send" type="submit" id="send-btn" aria-label="Send">
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+            </form>
+            <details class="address">
+              <summary>Delivery address</summary>
+              <input id="address-input" type="text" maxlength="200">
+            </details>
+          </div>
+        </section>
+
+        <aside class="inspector glass" id="panel-inspector">
+          <div class="inspector-head">
+            <h2 id="inspector-title">Session</h2>
+            <p id="inspector-hint">What the agent remembers in this conversation.</p>
+          </div>
+
+          <div class="tab-body" data-body="session">
+            <section class="block">
+              <div class="block-head"><h3>Current request</h3></div>
+              <p class="note">Each value shows where it came from: this message, an earlier turn, long-term memory or a default.</p>
+              <div class="slots" id="slots"></div>
+              <p class="empty-note" id="slots-empty">Nothing yet. Values fill in as the customer chats and carry into every follow-up.</p>
+            </section>
+            <section class="block">
+              <div class="block-head"><h3>Context window</h3><span class="count" id="window-count">0 / 12</span></div>
+              <p class="note">The most recent messages the agent keeps for this session.</p>
+              <ol class="window-list" id="window-list"></ol>
+            </section>
+            <section class="block split">
+              <div>
+                <div class="block-head"><h3>Declined</h3></div>
+                <div class="chips" id="declined"></div>
+              </div>
+              <div>
+                <div class="block-head"><h3>Orders</h3></div>
+                <div id="session-orders" class="order-list"></div>
+              </div>
+            </section>
+            <section class="block">
+              <div class="block-head"><h3>Long-term memory</h3><span class="hint">kept across sessions</span></div>
+              <div class="mini-stats" id="ltm-stats"></div>
+            </section>
+          </div>
+
+          <div class="tab-body" data-body="run" hidden>
+            <div id="run-panel"></div>
+          </div>
+
+          <div class="tab-body" data-body="data" hidden>
+            <div id="data-run"></div>
+            <section class="block">
+              <div class="block-head">
+                <h3>Cache layers</h3>
+                <button class="btn btn-small" id="flush-cache">Flush data caches</button>
+              </div>
+              <p class="note">Hit rate = how often an answer was reused instead of reading Zomato or running the model again.</p>
+              <div id="cache-table"></div>
+            </section>
+            <section class="block">
+              <div class="block-head"><h3>Query plans</h3><span class="hint">from SQLite</span></div>
+              <p class="note">Green lines mean the database jumps straight to matching rows using an index.</p>
+              <div id="query-plans"></div>
+            </section>
+            <section class="block">
+              <div class="block-head"><h3>Read from Zomato</h3><span class="count" id="observation-count"></span></div>
+              <p class="note">Every restaurant and dish the agent reads is stored with the time it was seen; price changes are kept as history.</p>
+              <div id="observations"></div>
+            </section>
+          </div>
+
+          <div class="tab-body" data-body="agents" hidden>
+            <div id="agents-panel"></div>
+          </div>
+
+          <div class="tab-body" data-body="memory" hidden>
+            <section class="block"><div class="mini-stats" id="memory-stats"></div></section>
+            <section class="block">
+              <div class="block-head"><h3>Search by meaning</h3></div>
+              <div class="form-row">
+                <input id="memory-query" type="text" value="veg pizza order" maxlength="200">
+                <button class="btn btn-small btn-primary" id="memory-search">Search</button>
+              </div>
+              <div id="memory-hits"></div>
+            </section>
+            <section class="block">
+              <div class="block-head">
+                <h3>Stored memories</h3>
+                <button class="btn btn-small btn-soft-danger" id="memory-reset">Reset</button>
+              </div>
+              <div id="memory-records"></div>
+            </section>
+          </div>
+
+          <div class="tab-body" data-body="faults" hidden>
+            <section class="block">
+              <div class="block-head"><h3>Break a step</h3><span class="hint">applies to the next request</span></div>
+              <label class="field-label" for="fault-step">Which step</label>
+              <select id="fault-step"></select>
+              <div class="field-label">What kind of failure</div>
+              <div class="radio-cards" id="fault-modes"></div>
+              <button class="btn btn-primary wide" id="fault-arm">Arm fault</button>
+            </section>
+            <section class="block">
+              <div class="block-head">
+                <h3>Armed</h3>
+                <button class="btn btn-small" id="fault-clear">Disarm all</button>
+              </div>
+              <div id="fault-list"></div>
+            </section>
+            <section class="block">
+              <div class="block-head"><h3>Slow motion</h3></div>
+              <label class="switch">
+                <input type="checkbox" id="slow-motion">
+                <span class="track"></span>
+                <span>Pause 0.8 s before every step</span>
+              </label>
+              <p class="note" style="margin-top:8px">Gives you time to stop the server by hand (Ctrl + C) mid-run, then restart it and resume.</p>
+            </section>
+          </div>
+        </aside>
+      </main>
+    </div>
+  </div>
+
+  <div class="scrim" id="scrim" hidden></div>
+  <div class="toast" id="toast" hidden></div>
+
+  <script src="/static/shared.js"></script>
+  <script src="/static/admin.js"></script>
+</body>
+</html>

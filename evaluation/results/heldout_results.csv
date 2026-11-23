@@ -1,0 +1,101 @@
+method,message,expected,predicted,dish_ok,all_fields_ok,ms,note
+rules only,can you get me a veg sandwich under 120,sandwich,sandwich,True,True,0.4,
+rules only,order kaju curry and 2 butter naan under 400,kaju curry,kaju curry,True,True,0.1,
+rules only,i need a strong filter coffee,filter coffee,strong filter coffee,False,False,0.1,
+rules only,please order chicken lollipop within 35 minutes,chicken lollipop,chicken lollipop,True,True,0.1,
+rules only,looking for a fresh lime soda,fresh lime soda,fresh lime soda,True,True,0.1,
+rules only,bhel puri 100 tak,bhel puri,bhel puri,True,True,0.1,
+rules only,get me an oreo shake in 15 mins,oreo shake,oreo shake,True,True,0.1,
+rules only,veg fried rice under 180 in 30 minutes,fried rice,fried rice,True,True,0.1,
+rules only,craving prawns curry under 600,prawns curry,prawns curry,True,True,0.1,
+rules only,something sweet like a chocolate lava cake,chocolate lava cake,chocolate lava cake,True,True,0.1,
+rules only,order a paneer wrap below 170,paneer wrap,paneer wrap,True,True,0.1,
+rules only,masala dosa and nothing else in 25 mins,masala dosa,masala dosa,True,True,0.1,
+rules only,we want a large farmhouse pizza under 500,farmhouse pizza,large farmhouse pizza,False,False,0.2,
+rules only,get mutton rogan josh within an hour,mutton rogan josh,mutton rogan josh,True,True,0.2,
+rules only,find egg curry under 200,egg curry,egg curry,True,True,0.1,
+rules only,a plate of misal under 120 please,misal,plate,False,False,0.1,
+rules only,order rajma chawal for lunch under 180,rajma chawal,rajma chawal,True,True,0.1,
+rules only,iced tea within 20 minutes,iced tea,iced tea,True,True,0.1,
+rules only,yaar ek veg roll chahiye 150 tak,roll,roll,True,True,0.1,
+rules only,quick blueberry cheesecake under 300,blueberry cheesecake,blueberry cheesecake,True,True,0.1,
+Qwen2.5-0.5B only,can you get me a veg sandwich under 120,sandwich,veggie sandwich,False,False,1378.9,"{""dish"": ""veggie sandwich"", ""is_veg"": true, ""max_price"": null, ""max_eta_minutes"": null}"
+Qwen2.5-0.5B + rules (agent),can you get me a veg sandwich under 120,sandwich,sandwich,True,True,1316.1,model + rules agree
+Qwen2.5-0.5B only,order kaju curry and 2 butter naan under 400,kaju curry,kaju curry,True,False,1242.8,"{""dish"": ""kaju curry"", ""is_veg"": null, ""max_price"": null, ""max_eta_minutes"": null}"
+Qwen2.5-0.5B + rules (agent),order kaju curry and 2 butter naan under 400,kaju curry,kaju curry,True,True,1163.6,model + rules agree
+Qwen2.5-0.5B only,i need a strong filter coffee,filter coffee,coffee,False,False,1228.1,"{""dish"": ""coffee"", ""is_veg"": null, ""max_price"": 10, ""max_eta_minutes"": null}"
+Qwen2.5-0.5B + rules (agent),i need a strong filter coffee,filter coffee,strong filter coffee,False,False,1215.3,model + rules agree
+Qwen2.5-0.5B only,please order chicken lollipop within 35 minutes,chicken lollipop,chicken lollipop,True,False,1347.1,"{""dish"": ""chicken lollipop"", ""is_veg"": null, ""max_price"": null, ""max_eta_minutes"": 35}"
+Qwen2.5-0.5B + rules (agent),please order chicken lollipop within 35 minutes,chicken lollipop,chicken lollipop,True,True,1362.9,model + rules agree
+Qwen2.5-0.5B only,looking for a fresh lime soda,fresh lime soda,soda,False,False,1188.6,"{""dish"": ""soda"", ""is_veg"": null, ""max_price"": null, ""max_eta_minutes"": null}"
+Qwen2.5-0.5B + rules (agent),looking for a fresh lime soda,fresh lime soda,fresh lime soda,True,True,1145.4,model + rules agree
+Qwen2.5-0.5B only,bhel puri 100 tak,bhel puri,bhel puri,True,False,1286.2,"{""dish"": ""bhel puri"", ""is_veg"": null, ""max_price"": null, ""max_eta_minutes"": null}"
+Qwen2.5-0.5B + rules (agent),bhel puri 100 tak,bhel puri,bhel puri,True,True,1325.0,model + rules agree
+Qwen2.5-0.5B only,get me an oreo shake in 15 mins,oreo shake,Oreo Shake,True,True,1347.5,"{""dish"": ""Oreo Shake"", ""is_veg"": null, ""max_price"": null, ""max_eta_minutes"": 15}"
+Qwen2.5-0.5B + rules (agent),get me an oreo shake in 15 mins,oreo shake,oreo shake,True,True,1307.7,model + rules agree
+Qwen2.5-0.5B only,veg fried rice under 180 in 30 minutes,fried rice,fried rice,True,False,1269.0,"{""dish"": ""fried rice"", ""is_veg"": true, ""max_price"": null, ""max_eta_minutes"": 30}"
+Qwen2.5-0.5B + rules (agent),veg fried rice under 180 in 30 minutes,fried rice,fried rice,True,True,1256.6,model + rules agree
+Qwen2.5-0.5B only,craving prawns curry under 600,prawns curry,prawns curry,True,False,1259.7,"{""dish"": ""prawns curry"", ""is_veg"": null, ""max_price"": null, ""max_eta_minutes"": null}"
+Qwen2.5-0.5B + rules (agent),craving prawns curry under 600,prawns curry,prawns curry,True,True,1209.3,model + rules agree
+Qwen2.5-0.5B only,something sweet like a chocolate lava cake,chocolate lava cake,chocolate lava cake,True,True,1288.2,"{""dish"": ""chocolate lava cake"", ""is_veg"": null, ""max_price"": null, ""max_eta_minutes"": null}"
+Qwen2.5-0.5B + rules (agent),something sweet like a chocolate lava cake,chocolate lava cake,chocolate lava cake,True,True,1279.4,model + rules agree
+Qwen2.5-0.5B only,order a paneer wrap below 170,paneer wrap,paneer wrap,True,False,1311.3,"{""dish"": ""paneer wrap"", ""is_veg"": null, ""max_price"": null, ""max_eta_minutes"": null}"
+Qwen2.5-0.5B + rules (agent),order a paneer wrap below 170,paneer wrap,paneer wrap,True,True,1208.3,model + rules agree
+Qwen2.5-0.5B only,masala dosa and nothing else in 25 mins,masala dosa,dosa,False,False,1242.8,"{""dish"": ""dosa"", ""is_veg"": null, ""max_price"": null, ""max_eta_minutes"": 25}"
+Qwen2.5-0.5B + rules (agent),masala dosa and nothing else in 25 mins,masala dosa,masala dosa,True,True,1263.8,model + rules agree
+Qwen2.5-0.5B only,we want a large farmhouse pizza under 500,farmhouse pizza,farmhouse,False,False,1230.9,"{""dish"": ""farmhouse"", ""is_veg"": null, ""max_price"": null, ""max_eta_minutes"": null}"
+Qwen2.5-0.5B + rules (agent),we want a large farmhouse pizza under 500,farmhouse pizza,large farmhouse pizza,False,False,1173.3,model + rules agree
+Qwen2.5-0.5B only,get mutton rogan josh within an hour,mutton rogan josh,rogan josh,False,False,1313.6,"{""dish"": ""rogan josh"", ""is_veg"": null, ""max_price"": null, ""max_eta_minutes"": 60}"
+Qwen2.5-0.5B + rules (agent),get mutton rogan josh within an hour,mutton rogan josh,mutton rogan josh,True,True,1400.7,model + rules agree
+Qwen2.5-0.5B only,find egg curry under 200,egg curry,egg curry,True,False,1200.8,"{""dish"": ""egg curry"", ""is_veg"": null, ""max_price"": null, ""max_eta_minutes"": null}"
+Qwen2.5-0.5B + rules (agent),find egg curry under 200,egg curry,egg curry,True,True,1190.3,model + rules agree
+Qwen2.5-0.5B only,a plate of misal under 120 please,misal,misal,True,False,1201.3,"{""dish"": ""misal"", ""is_veg"": null, ""max_price"": null, ""max_eta_minutes"": null}"
+Qwen2.5-0.5B + rules (agent),a plate of misal under 120 please,misal,misal,True,True,1182.8,model
+Qwen2.5-0.5B only,order rajma chawal for lunch under 180,rajma chawal,rajma chawal,True,False,1331.4,"{""dish"": ""rajma chawal"", ""is_veg"": null, ""max_price"": null, ""max_eta_minutes"": null}"
+Qwen2.5-0.5B + rules (agent),order rajma chawal for lunch under 180,rajma chawal,rajma chawal,True,True,1318.0,model + rules agree
+Qwen2.5-0.5B only,iced tea within 20 minutes,iced tea,iced tea,True,True,1304.0,"{""dish"": ""iced tea"", ""is_veg"": null, ""max_price"": null, ""max_eta_minutes"": 20}"
+Qwen2.5-0.5B + rules (agent),iced tea within 20 minutes,iced tea,iced tea,True,True,1272.6,model + rules agree
+Qwen2.5-0.5B only,yaar ek veg roll chahiye 150 tak,roll,veg roll,False,False,1371.2,"{""dish"": ""veg roll"", ""is_veg"": true, ""max_price"": 150, ""max_eta_minutes"": null}"
+Qwen2.5-0.5B + rules (agent),yaar ek veg roll chahiye 150 tak,roll,roll,True,True,1326.1,model + rules agree
+Qwen2.5-0.5B only,quick blueberry cheesecake under 300,blueberry cheesecake,blueberry cheesecake,True,False,1191.2,"{""dish"": ""blueberry cheesecake"", ""is_veg"": null, ""max_price"": null, ""max_eta_minutes"": null}"
+Qwen2.5-0.5B + rules (agent),quick blueberry cheesecake under 300,blueberry cheesecake,blueberry cheesecake,True,True,1247.5,model + rules agree
+Qwen2.5-1.5B only,can you get me a veg sandwich under 120,sandwich,veg sandwich,False,False,1986.3,"{   ""dish"": ""veg sandwich"",   ""is_veg"": true,   ""max_price"": null,   ""max_eta_minutes"": 120 }"
+Qwen2.5-1.5B + rules (agent),can you get me a veg sandwich under 120,sandwich,sandwich,True,False,1780.1,model + rules agree
+Qwen2.5-1.5B only,order kaju curry and 2 butter naan under 400,kaju curry,kaju curry,True,True,1852.1,"{   ""dish"": ""kaju curry"",   ""is_veg"": null,   ""max_price"": 400,   ""max_eta_minutes"": null }"
+Qwen2.5-1.5B + rules (agent),order kaju curry and 2 butter naan under 400,kaju curry,kaju curry,True,True,1927.3,model + rules agree
+Qwen2.5-1.5B only,i need a strong filter coffee,filter coffee,filter coffee,True,True,1629.4,"{   ""dish"": ""filter coffee"",   ""is_veg"": null,   ""max_price"": null,   ""max_eta_minutes"": null }"
+Qwen2.5-1.5B + rules (agent),i need a strong filter coffee,filter coffee,strong filter coffee,False,False,1635.7,model + rules agree
+Qwen2.5-1.5B only,please order chicken lollipop within 35 minutes,chicken lollipop,chicken lollipop,True,False,1859.2,"{   ""dish"": ""chicken lollipop"",   ""is_veg"": null,   ""max_price"": null,   ""max_eta_minutes"": 35 }"
+Qwen2.5-1.5B + rules (agent),please order chicken lollipop within 35 minutes,chicken lollipop,chicken lollipop,True,True,1937.2,model + rules agree
+Qwen2.5-1.5B only,looking for a fresh lime soda,fresh lime soda,soda,False,False,1760.5,"{   ""dish"": ""soda"",   ""is_veg"": null,   ""max_price"": null,   ""max_eta_minutes"": null }"
+Qwen2.5-1.5B + rules (agent),looking for a fresh lime soda,fresh lime soda,fresh lime soda,True,True,1738.1,model + rules agree
+Qwen2.5-1.5B only,bhel puri 100 tak,bhel puri,bhel puri,True,False,1930.9,"{   ""dish"": ""bhel puri"",   ""is_veg"": true,   ""max_price"": 100,   ""max_eta_minutes"": null }"
+Qwen2.5-1.5B + rules (agent),bhel puri 100 tak,bhel puri,bhel puri,True,False,1889.6,model + rules agree
+Qwen2.5-1.5B only,get me an oreo shake in 15 mins,oreo shake,oreo shake,True,True,1822.4,"{   ""dish"": ""oreo shake"",   ""is_veg"": null,   ""max_price"": null,   ""max_eta_minutes"": 15 }"
+Qwen2.5-1.5B + rules (agent),get me an oreo shake in 15 mins,oreo shake,oreo shake,True,True,1787.4,model + rules agree
+Qwen2.5-1.5B only,veg fried rice under 180 in 30 minutes,fried rice,veg fried rice,False,False,1806.9,"{   ""dish"": ""veg fried rice"",   ""is_veg"": true,   ""max_price"": null,   ""max_eta_minutes"": 30 }"
+Qwen2.5-1.5B + rules (agent),veg fried rice under 180 in 30 minutes,fried rice,fried rice,True,True,1993.6,model + rules agree
+Qwen2.5-1.5B only,craving prawns curry under 600,prawns curry,prawns curry,True,False,1721.4,"{   ""dish"": ""prawns curry"",   ""max_price"": 600,   ""max_eta_minutes"": null }"
+Qwen2.5-1.5B + rules (agent),craving prawns curry under 600,prawns curry,prawns curry,True,True,1456.9,model + rules agree
+Qwen2.5-1.5B only,something sweet like a chocolate lava cake,chocolate lava cake,chocolate lava cake,True,True,1716.8,"{   ""dish"": ""chocolate lava cake"",   ""is_veg"": null,   ""max_price"": null,   ""max_eta_minutes"": null }"
+Qwen2.5-1.5B + rules (agent),something sweet like a chocolate lava cake,chocolate lava cake,chocolate lava cake,True,True,1735.1,model + rules agree
+Qwen2.5-1.5B only,order a paneer wrap below 170,paneer wrap,paneer wrap,True,True,1460.2,"{   ""dish"": ""paneer wrap"",   ""max_price"": 170,   ""max_eta_minutes"": null }"
+Qwen2.5-1.5B + rules (agent),order a paneer wrap below 170,paneer wrap,paneer wrap,True,True,1460.7,model + rules agree
+Qwen2.5-1.5B only,masala dosa and nothing else in 25 mins,masala dosa,masala dosa,True,False,2059.5,"{   ""dish"": ""masala dosa"",   ""is_veg"": null,   ""max_price"": null,   ""max_eta_minutes"": 150 }"
+Qwen2.5-1.5B + rules (agent),masala dosa and nothing else in 25 mins,masala dosa,masala dosa,True,True,1922.7,model + rules agree
+Qwen2.5-1.5B only,we want a large farmhouse pizza under 500,farmhouse pizza,farmhouse pizza,True,True,1931.4,"{   ""dish"": ""farmhouse pizza"",   ""is_veg"": null,   ""max_price"": 500,   ""max_eta_minutes"": null }"
+Qwen2.5-1.5B + rules (agent),we want a large farmhouse pizza under 500,farmhouse pizza,large farmhouse pizza,False,False,2026.0,model + rules agree
+Qwen2.5-1.5B only,get mutton rogan josh within an hour,mutton rogan josh,mutton rogan josh,True,False,2061.4,"{   ""dish"": ""mutton rogan josh"",   ""is_veg"": null,   ""max_price"": null,   ""max_eta_minutes"": 60 }"
+Qwen2.5-1.5B + rules (agent),get mutton rogan josh within an hour,mutton rogan josh,mutton rogan josh,True,True,1999.1,model + rules agree
+Qwen2.5-1.5B only,find egg curry under 200,egg curry,egg curry,True,False,1854.9,"{   ""dish"": ""egg curry"",   ""is_veg"": null,   ""max_price"": 200,   ""max_eta_minutes"": null }"
+Qwen2.5-1.5B + rules (agent),find egg curry under 200,egg curry,egg curry,True,True,1812.0,model + rules agree
+Qwen2.5-1.5B only,a plate of misal under 120 please,misal,plate of misal,False,False,1465.6,"{   ""dish"": ""plate of misal"",   ""max_price"": 120,   ""max_eta_minutes"": null }"
+Qwen2.5-1.5B + rules (agent),a plate of misal under 120 please,misal,plate misal,False,False,1733.6,model
+Qwen2.5-1.5B only,order rajma chawal for lunch under 180,rajma chawal,rajma chawal,True,True,1588.3,"{   ""dish"": ""rajma chawal"",   ""max_price"": 180,   ""max_eta_minutes"": null }"
+Qwen2.5-1.5B + rules (agent),order rajma chawal for lunch under 180,rajma chawal,rajma chawal,True,True,1613.2,model + rules agree
+Qwen2.5-1.5B only,iced tea within 20 minutes,iced tea,iced tea,True,True,1736.8,"{   ""dish"": ""iced tea"",   ""is_veg"": null,   ""max_price"": null,   ""max_eta_minutes"": 20 }"
+Qwen2.5-1.5B + rules (agent),iced tea within 20 minutes,iced tea,iced tea,True,True,1771.8,model + rules agree
+Qwen2.5-1.5B only,yaar ek veg roll chahiye 150 tak,roll,veg roll,False,False,2028.7,"{   ""dish"": ""veg roll"",   ""is_veg"": true,   ""max_price"": 150,   ""max_eta_minutes"": 600 }"
+Qwen2.5-1.5B + rules (agent),yaar ek veg roll chahiye 150 tak,roll,roll,True,True,1999.3,model + rules agree
+Qwen2.5-1.5B only,quick blueberry cheesecake under 300,blueberry cheesecake,blueberry cheesecake,True,True,1949.9,"{   ""dish"": ""blueberry cheesecake"",   ""is_veg"": null,   ""max_price"": 300,   ""max_eta_minutes"": null }"
+Qwen2.5-1.5B + rules (agent),quick blueberry cheesecake under 300,blueberry cheesecake,blueberry cheesecake,True,True,1937.6,model + rules agree

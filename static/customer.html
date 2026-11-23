@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Food Ordering Agent</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/customer.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-inner">
+      <a class="brand" href="/">
+        <span class="brand-mark" id="brand-mark"></span>
+        <span class="brand-text">
+          <span class="brand-name">AI Food Ordering Agent</span>
+          <span class="brand-tag">An agent that browses Zomato for you</span>
+        </span>
+      </a>
+      <div class="header-actions">
+        <button class="address-chip zomato-chip" id="zomato-chip" type="button" aria-label="Zomato sign-in status">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+          <span id="zomato-text">Zomato · …</span>
+        </button>
+        <button class="address-chip" id="address-chip" type="button" aria-label="Change delivery address">
+          <svg viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 1 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <span id="address-text">Loading…</span>
+        </button>
+        <button class="btn btn-outline" id="new-chat" type="button">
+          <svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+          <span>New chat</span>
+        </button>
+      </div>
+    </div>
+    <div class="address-editor" id="address-editor" hidden>
+      <div class="header-inner">
+        <input id="address-input" type="text" maxlength="200" aria-label="Delivery address">
+        <button class="btn btn-primary" id="address-save" type="button">Save</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="offline" id="offline" hidden>
+    <span class="spinner"></span> Reconnecting… your order progress is safe.
+  </div>
+
+  <main class="main" id="main">
+    <div class="feed" id="feed"></div>
+  </main>
+
+  <footer class="dock">
+    <div class="dock-inner">
+      <div class="looking" id="looking" hidden></div>
+      <div class="chips" id="chips"></div>
+      <form class="composer" id="composer">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="message" type="text" maxlength="500" autocomplete="off" placeholder="What are you craving? e.g. veg pizza under ₹400">
+        <button class="send" id="send" type="submit" aria-label="Send">
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </button>
+      </form>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" hidden></div>
+
+  <script src="/static/shared.js"></script>
+  <script src="/static/customer.js"></script>
+</body>
+</html>

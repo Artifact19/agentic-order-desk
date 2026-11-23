@@ -1,0 +1,36 @@
+message,dish,dish_method,cards_read,menus_read,reused_from_cache,dishes_in_budget,understand_ms,search_ms,menus_ms,rank_ms,explain_ms,total_s,resumed,chosen
+veg pizza under 300 within 40 minutes,pizza,model + rules agree,21,5,False,8,1541,17579,17488,1.0,5882,42.5,0,Cheese pizza · Sunrise Snacks · Rs 140 · 20–25 min
+something cheaper,pizza,none,21,5,True,1,2919,10,3,0.7,2168,5.1,0,6 Pizza Poori · Spice Route Cafe · Rs 110 · 25–30 min
+waffles under 250 within 45 minutes,waffles,model + rules agree,9,2,False,8,3468,10975,6883,1.2,12227,33.6,0,Double Choco Mania Waffle · Spice Route Cafe · Rs 120 · 25–30 min
+falooda under 200 within 45 minutes,falooda,rules,9,5,False,0,3704,6856,18632,0.8,1,29.2,0,none
+chicken biryani under 400 within 45 minutes,chicken biryani,model + rules agree,9,5,False,13,4589,5041,18361,2.8,9595,37.6,0,Chicken Dum Biryani · Biryani Junction · Rs 120 · 10–15 min
+veg pizza under 300 within 40 minutes,pizza,model + rules agree,21,5,False,4,5709,19391,18688,2.2,6635,50.4,0,Cheese pizza · Sunrise Snacks · Rs 140 · 20–25 min
+something cheaper,pizza,none,21,5,True,0,4138,16,3,0.6,1,4.2,0,none
+veg pizza under 300 within 40 minutes,pizza,model + rules agree,21,5,False,4,0,14816,19326,2.2,8704,42.8,0,Cheese pizza · Sunrise Snacks · Rs 140 · 25–30 min
+what about biryani?,biryani,model + rules agree,21,5,False,6,4887,14662,19223,1.3,11684,50.5,0,Dumwali Vegetable Biryani · Spice Garden · Rs 290 · 15–20 min
+cold coffee under 150 within 30 minutes,cold coffee,model + rules agree,9,5,False,5,6807,12392,20012,1.2,7859,47.2,1,Cold Coffee · Corner Cafe · Rs 69 · 15–20 min
+veg pizza under 300 within 40 minutes,pizza,model + rules agree,21,5,False,8,5591,16644,18607,1.8,6573,47.6,0,Cheese pizza · Sunrise Snacks · Rs 140 · 20–25 min
+what about biryani?,biryani,model + rules agree,21,5,False,6,5175,14823,18977,1.2,11403,50.4,0,Dumwali Vegetable Biryani · Spice Garden · Rs 290 · 15–20 min
+paneer tikka under 300 within 40 minutes,paneer tikka,model + rules agree,21,5,False,10,4095,18053,19396,1.1,7914,49.5,0,Paneer Tikka Masala Mini Rice Bowl · Northern Bowls · Rs 249 · 20–25 min
+falooda under 200 within 45 minutes,falooda,rules,21,5,False,5,3532,12072,18963,1.0,13854,48.4,0,"Rajwadi Kulfi Falooda (Jumbo Cup, 110 ml, Pack of 3) · Frosty Scoops · Rs 135 · 5–10 min"
+masala dosa under 150 within 40 minutes,masala dosa,model + rules agree,21,5,False,4,3900,14587,17833,1.0,6686,43.0,0,Masala dosa · Sunrise Snacks · Rs 120 · 20–25 min
+cold coffee under 150 within 30 minutes,cold coffee,model + rules agree,21,5,False,4,3730,11660,20642,1.6,5829,41.9,0,Cold Coffee · Corner Cafe · Rs 69 · 15–20 min
+chicken biryani under 400 within 45 minutes,chicken biryani,model + rules agree,9,5,False,8,1410,42171,20173,1.9,4628,68.4,0,Chicken Dum Biryani · Biryani Junction · Rs 120 · 10–15 min
+veg pizza under 300 within 40 minutes,pizza,model + rules agree,9,5,False,8,2206,15536,18315,0.8,9656,45.8,0,Plain cheese pizza · The Bean House · Rs 162 · 10–15 min
+what about biryani?,biryani,model + rules agree,21,5,False,6,2028,14785,19745,1.1,10343,46.9,0,Dumwali Vegetable Biryani · Spice Garden · Rs 290 · 20–25 min
+cold coffee under 150 within 30 minutes,cold coffee,model + rules agree,21,5,False,3,4187,20779,19808,0.9,7891,52.7,1,Cold coffee · Sunrise Snacks · Rs 80 · 25–30 min
+veg pizza under 300 within 40 minutes,pizza,model + rules agree,9,5,True,8,0,14,2,0.6,5102,5.1,0,Plain cheese pizza · The Bean House · Rs 162 · 10–15 min
+what about biryani?,biryani,model + rules agree,21,5,True,6,0,32,3,0.8,4763,4.8,0,Dumwali Vegetable Biryani · Spice Garden · Rs 290 · 20–25 min
+cold coffee under 150 within 30 minutes,cold coffee,model + rules agree,21,5,True,3,0,6046,4,0.6,5199,11.2,1,Cold coffee · Sunrise Snacks · Rs 80 · 25–30 min
+veg pizza under 300 within 40 minutes,pizza,model + rules agree,21,5,False,8,2622,30967,22401,0.6,3889,59.9,0,Plain cheese pizza · The Bean House · Rs 162 · 15–20 min
+what about biryani?,biryani,model + rules agree,9,5,False,3,2402,18803,45284,1.1,3751,70.3,0,Biryani Rice · Green Leaf Pure Veg · Rs 220 · 30–35 min
+cold coffee under 150 within 30 minutes,cold coffee,model + rules agree,21,5,False,9,1885,31040,25232,1.2,3233,61.4,1,Cold Coffee · Dosa Corner · Rs 50 · 15–20 min
+veg pizza under 300 within 40 minutes,pizza,model + rules agree,9,5,False,9,2042,30619,23642,0.5,3015,59.3,0,Plain cheese pizza · The Bean House · Rs 162 · 15–20 min
+what about biryani?,biryani,model + rules agree,9,4,False,2,1967,30532,23578,1.3,2386,58.5,0,Biryani Rice · Green Leaf Pure Veg · Rs 220 · 35–40 min
+cold coffee under 150 within 30 minutes,cold coffee,model + rules agree,9,5,False,5,2033,35000,27845,1.1,4367,69.3,1,Thick Cold Coffee · Golden Crust Pizzeria · Rs 109 · 20–25 min
+veg pizza under 300 within 40 minutes,pizza,model + rules agree,21,5,False,7,5758,14892,19147,1.2,9622,49.5,0,Cheese pizza · Sunrise Snacks · Rs 140 · 25–30 min
+what about biryani?,biryani,model + rules agree,21,5,False,3,3984,14729,20683,1.2,9707,49.1,0,Biryani Rice · Green Leaf Pure Veg · Rs 220 · 35–40 min
+cold coffee under 150 within 30 minutes,cold coffee,model + rules agree,21,5,False,9,5079,14518,17706,2.9,9413,46.7,1,Cold Coffee · Dosa Corner · Rs 50 · 15–20 min
+veg pizza under 300 within 40 minutes,pizza,model + rules agree,8,5,False,9,7295,16184,18538,2.9,7859,50.2,0,Plain cheese pizza · The Bean House · Rs 162 · 15–20 min
+what about biryani?,biryani,model + rules agree,21,3,False,0,4601,14638,12772,1.9,3,32.0,0,none
+cold coffee under 150 within 30 minutes,cold coffee,model + rules agree,21,5,False,9,5085,20143,17446,7.0,10352,53.1,1,Cold Coffee · Dosa Corner · Rs 50 · 15–20 min

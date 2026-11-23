@@ -1,0 +1,21 @@
+message,dish,is_veg,max_price,max_eta_minutes
+can you get me a veg sandwich under 120,sandwich,true,120,
+order kaju curry and 2 butter naan under 400,kaju curry,,400,
+i need a strong filter coffee,filter coffee,,,
+please order chicken lollipop within 35 minutes,chicken lollipop,false,,35
+looking for a fresh lime soda,fresh lime soda,,,
+bhel puri 100 tak,bhel puri,,100,
+get me an oreo shake in 15 mins,oreo shake,,,15
+veg fried rice under 180 in 30 minutes,fried rice,true,180,30
+craving prawns curry under 600,prawns curry,false,600,
+something sweet like a chocolate lava cake,chocolate lava cake,,,
+order a paneer wrap below 170,paneer wrap,,170,
+masala dosa and nothing else in 25 mins,masala dosa,,,25
+we want a large farmhouse pizza under 500,farmhouse pizza,,500,
+get mutton rogan josh within an hour,mutton rogan josh,false,,60
+find egg curry under 200,egg curry,false,200,
+a plate of misal under 120 please,misal,,120,
+order rajma chawal for lunch under 180,rajma chawal,,180,
+iced tea within 20 minutes,iced tea,,,20
+yaar ek veg roll chahiye 150 tak,roll,true,150,
+quick blueberry cheesecake under 300,blueberry cheesecake,,300,

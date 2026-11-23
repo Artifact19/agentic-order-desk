@@ -1,0 +1,37 @@
+{
+  "rules only": {
+    "dish_accuracy": 0.85,
+    "all_fields_accuracy": 0.85,
+    "dish_correct": 17,
+    "messages": 20,
+    "median_ms": 0.1
+  },
+  "Qwen2.5-0.5B only": {
+    "dish_accuracy": 0.65,
+    "all_fields_accuracy": 0.15,
+    "dish_correct": 13,
+    "messages": 20,
+    "median_ms": 1286.2
+  },
+  "Qwen2.5-0.5B + rules (agent)": {
+    "dish_accuracy": 0.9,
+    "all_fields_accuracy": 0.9,
+    "dish_correct": 18,
+    "messages": 20,
+    "median_ms": 1263.8
+  },
+  "Qwen2.5-1.5B only": {
+    "dish_accuracy": 0.75,
+    "all_fields_accuracy": 0.45,
+    "dish_correct": 15,
+    "messages": 20,
+    "median_ms": 1852.1
+  },
+  "Qwen2.5-1.5B + rules (agent)": {
+    "dish_accuracy": 0.85,
+    "all_fields_accuracy": 0.75,
+    "dish_correct": 17,
+    "messages": 20,
+    "median_ms": 1812.0
+  }
+}
